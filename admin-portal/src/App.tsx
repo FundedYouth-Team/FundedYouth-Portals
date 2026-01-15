@@ -6,10 +6,17 @@ import { UserDetailPage } from "pages/UserDetailPage";
 import { VpsListPage } from "pages/VpsListPage";
 import { VpsDetailPage } from "pages/VpsDetailPage";
 import { ServicesPage } from "pages/ServicesPage";
+import { ProductsPage } from "pages/ProductsPage";
+import { ProductEditPage } from "pages/ProductEditPage";
+import { ProductTypesPage } from "pages/ProductTypesPage";
+import { ProductTypeAddPage } from "pages/ProductTypeAddPage";
+import { ProductTypeEditPage } from "pages/ProductTypeEditPage";
+import { CategoriesPage } from "pages/CategoriesPage";
 import { NotificationsPage } from "pages/NotificationsPage";
 import { TicketsPage } from "pages/TicketsPage";
 import { RoleManagementPage } from "pages/RoleManagementPage";
 import { AuditLogsPage } from "pages/AuditLogsPage";
+import { MenuVisibilityPage } from "pages/MenuVisibilityPage";
 import { LoginPage } from "pages/LoginPage";
 import { RequireAdminOrManager, RequireAdmin } from "guards";
 
@@ -31,6 +38,12 @@ export default function App() {
         <Route path="vps" element={<VpsListPage />} />
         <Route path="vps/:vpsId" element={<VpsDetailPage />} />
         <Route path="services" element={<ServicesPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="products/:productId/edit" element={<ProductEditPage />} />
+        <Route path="products/types" element={<ProductTypesPage />} />
+        <Route path="products/types/add" element={<ProductTypeAddPage />} />
+        <Route path="products/types/:typeId/edit" element={<ProductTypeEditPage />} />
+        <Route path="products/categories" element={<CategoriesPage />} />
         <Route path="notifications" element={<NotificationsPage />} />
         <Route path="tickets" element={<TicketsPage />} />
         {/* Admin-only routes - RequireAdmin guard enforces admin role */}
@@ -47,6 +60,14 @@ export default function App() {
           element={
             <RequireAdmin>
               <AuditLogsPage />
+            </RequireAdmin>
+          }
+        />
+        <Route
+          path="menu-visibility"
+          element={
+            <RequireAdmin>
+              <MenuVisibilityPage />
             </RequireAdmin>
           }
         />

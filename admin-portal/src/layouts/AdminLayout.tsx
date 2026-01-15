@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet, NavLink, useNavigate } from "react-router-dom";
+import { Outlet, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "contexts/AuthContext";
 import { ROLES, isAdmin } from "lib/roles";
 import { NotificationBell } from "components/NotificationBell";
@@ -8,7 +8,11 @@ import { TicketBell } from "components/TicketBell";
 export function AdminLayout() {
   const { user, role, signOut } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProductsExpanded, setIsProductsExpanded] = useState(
+    location.pathname.startsWith("/products"),
+  );
 
   const handleSignOut = async () => {
     await signOut();
@@ -115,6 +119,101 @@ export function AdminLayout() {
                 Users
               </span>
             </NavLink>
+          </li>
+          {/* Products Menu with Sub-navigation */}
+          <li>
+            <button
+              onClick={() => setIsProductsExpanded(!isProductsExpanded)}
+              className={`block w-full px-4 py-3 text-left transition-colors duration-200 ${
+                location.pathname.startsWith("/products")
+                  ? "bg-gray-800 border-l-4 border-blue-400 text-white"
+                  : "text-gray-300 hover:bg-gray-800 hover:text-white"
+              }`}
+            >
+              <span className="flex items-center justify-between">
+                <span className="flex items-center gap-3">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  Products
+                </span>
+                <svg
+                  className={`size-4 transition-transform duration-200 ${
+                    isProductsExpanded ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </button>
+            {isProductsExpanded && (
+              <ul className="bg-gray-950">
+                <li>
+                  <NavLink
+                    to="/products"
+                    end
+                    className={({ isActive }) =>
+                      `block py-2 pl-12 pr-4 text-sm transition-colors duration-200 ${
+                        isActive
+                          ? "bg-gray-800 text-white"
+                          : "text-gray-400 hover:bg-gray-800 hover:text-white"
+                      }`
+                    }
+                    onClick={handleNavClick}
+                  >
+                    All Products
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/products/types"
+                    className={({ isActive }) =>
+                      `block py-2 pl-12 pr-4 text-sm transition-colors duration-200 ${
+                        isActive
+                          ? "bg-gray-800 text-white"
+                          : "text-gray-400 hover:bg-gray-800 hover:text-white"
+                      }`
+                    }
+                    onClick={handleNavClick}
+                  >
+                    Product Type
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/products/categories"
+                    className={({ isActive }) =>
+                      `block py-2 pl-12 pr-4 text-sm transition-colors duration-200 ${
+                        isActive
+                          ? "bg-gray-800 text-white"
+                          : "text-gray-400 hover:bg-gray-800 hover:text-white"
+                      }`
+                    }
+                    onClick={handleNavClick}
+                  >
+                    Category
+                  </NavLink>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <NavLink
@@ -265,6 +364,36 @@ export function AdminLayout() {
                       />
                     </svg>
                     Audit Logs
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/menu-visibility"
+                  className={navLinkClass}
+                  onClick={handleNavClick}
+                >
+                  <span className="flex items-center gap-3">
+                    <svg
+                      className="size-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    Menu Visibility
                   </span>
                 </NavLink>
               </li>

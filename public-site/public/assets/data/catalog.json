@@ -1,0 +1,873 @@
+{
+  "pathways": [
+    {
+      "id": "foundation",
+      "name": "Foundation",
+      "color": "amber",
+      "icon": "assets/icons/pathways/foundation.svg"
+    },
+    {
+      "id": "3d-printing",
+      "name": "3D Printing",
+      "color": "blue",
+      "icon": "assets/icons/pathways/3d-printing.svg"
+    },
+    {
+      "id": "coding",
+      "name": "Coding",
+      "color": "purple",
+      "icon": "assets/icons/pathways/coding.svg"
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "color": "yellow",
+      "icon": "assets/icons/pathways/electronics.svg"
+    },
+    {
+      "id": "3d-modeling",
+      "name": "3D Modeling",
+      "color": "orange",
+      "icon": "assets/icons/pathways/3d-modeling.svg"
+    }
+  ],
+  "courses": [
+    {
+      "id": "3DP1",
+      "icon": "assets/icons/courses/printer.svg",
+      "pillColor": "amber",
+      "name": "Intro to 3D Printing",
+      "description": "Learn the fundamentals of 3D Printing using Cura Slicing Software. Take an existing 3D model and prepare it for printing on FDM-style printers like the Sovol SV06 Plus.",
+      "url": "course-3dp1.php",
+      "status": "available",
+      "requirements": [],
+      "classTime": "~4 hours",
+      "pathway": "foundation",
+      "price": "$40",
+      "unlocks": [
+        "Computer Lab Access",
+        "Sovol 3D Printers",
+        "All Learning Pathways"
+      ],
+      "details": {
+        "learningPoints": [
+          "Understand how FDM 3D printers work",
+          "Navigate and configure Cura slicer software",
+          "Prepare 3D models for successful printing",
+          "Select appropriate print settings for different projects",
+          "Troubleshoot common printing issues",
+          "Safely operate Sovol SV06 Plus printers"
+        ],
+        "lessons": [
+          {
+            "title": "Introduction to 3D Printing",
+            "description": "Overview of 3D printing technology, types of printers, and how FDM printing works.",
+            "time": "30 min",
+            "activities": [
+              {
+                "type": "quiz",
+                "title": "3D Printing Basics Quiz",
+                "time": "10 min"
+              }
+            ]
+          },
+          {
+            "title": "Getting Started with Cura",
+            "description": "Installing Cura, setting up your first printer profile, and understanding the interface.",
+            "time": "45 min",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Configure Your First Printer Profile",
+                "time": "15 min"
+              }
+            ]
+          },
+          {
+            "title": "Importing and Orienting Models",
+            "description": "How to import STL files, position models on the build plate, and optimize orientation for print quality.",
+            "time": "40 min",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Orient a Complex Model",
+                "time": "20 min"
+              }
+            ]
+          },
+          {
+            "title": "Print Settings Deep Dive",
+            "description": "Understanding layer height, infill, supports, adhesion settings, and when to use each.",
+            "time": "50 min",
+            "activities": [
+              {
+                "type": "quiz",
+                "title": "Print Settings Knowledge Check",
+                "time": "10 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Configure Settings for Different Scenarios",
+                "time": "20 min"
+              }
+            ]
+          },
+          {
+            "title": "Your First Print",
+            "description": "Hands-on session: prepare a model, send to printer, monitor the print, and remove finished object.",
+            "time": "60 min",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Complete Your First 3D Print",
+                "time": "45 min"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3DP2",
+      "icon": "assets/icons/courses/printer.svg",
+      "pillColor": "blue",
+      "name": "Bambu Studio",
+      "description": "Learn the basics of Bambu Studio, adapting foundational techniques from 3DP1. Master printing on Bambulabs X1C and P1S printers. This course does not cover multi-material printing.",
+      "url": "course-3dp2.php",
+      "status": "available",
+      "requirements": [
+        "3DP1"
+      ],
+      "classTime": "~3 hours",
+      "pathway": "3d-printing",
+      "details": {
+        "learningPoints": [
+          "Navigate Bambu Studio interface",
+          "Understand differences between Cura and Bambu Studio",
+          "Configure settings for Bambulab X1C and P1S printers",
+          "Use Bambu's automated features effectively",
+          "Monitor prints remotely via Bambu Handy app"
+        ],
+        "lessons": [
+          {
+            "title": "Bambu Studio Overview",
+            "description": "Introduction to Bambu Studio interface and how it compares to Cura.",
+            "time": "30 min",
+            "activities": [
+              {
+                "type": "quiz",
+                "title": "Interface Familiarity Check",
+                "time": "5 min"
+              }
+            ]
+          },
+          {
+            "title": "Printer Profiles and Settings",
+            "description": "Setting up profiles for X1C and P1S, understanding Bambu's preset system.",
+            "time": "40 min",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Create a Custom Profile",
+                "time": "15 min"
+              }
+            ]
+          },
+          {
+            "title": "Advanced Slicing Features",
+            "description": "Using automatic supports, paint-on supports, and adaptive layer height.",
+            "time": "45 min",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Optimize a Model with Advanced Features",
+                "time": "20 min"
+              }
+            ]
+          },
+          {
+            "title": "Printing and Monitoring",
+            "description": "Sending prints to Bambu printers, using the touchscreen, and remote monitoring.",
+            "time": "50 min",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Complete a Print on Bambu Printer",
+                "time": "40 min"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3DP3",
+      "icon": "assets/icons/courses/printer.svg",
+      "pillColor": "blue",
+      "name": "Bambu Studio - Advanced",
+      "description": "Introduction to multi-material printing and fine-tuning print settings for optimal results.",
+      "url": "course-3dp3.php",
+      "status": "coming-soon",
+      "requirements": [
+        "3DP2"
+      ],
+      "classTime": "~4 hours",
+      "pathway": "3d-printing",
+      "details": {
+        "learningPoints": [
+          "Set up and use the AMS (Automatic Material System)",
+          "Design models for multi-color printing",
+          "Configure color changes and material swaps",
+          "Fine-tune settings for perfect print quality",
+          "Troubleshoot multi-material printing issues"
+        ],
+        "lessons": [
+          {
+            "title": "Introduction to AMS",
+            "description": "Understanding the Automatic Material System and its capabilities.",
+            "time": "30 min",
+            "activities": []
+          },
+          {
+            "title": "Multi-Color Print Setup",
+            "description": "Preparing models with multiple colors in Bambu Studio.",
+            "time": "45 min",
+            "activities": []
+          },
+          {
+            "title": "Material Compatibility",
+            "description": "Understanding which materials can be printed together and transition settings.",
+            "time": "40 min",
+            "activities": []
+          },
+          {
+            "title": "Advanced Quality Settings",
+            "description": "Fine-tuning flow rates, temperatures, and speeds for optimal results.",
+            "time": "50 min",
+            "activities": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "CP1",
+      "icon": "assets/icons/courses/puzzle-piece.svg",
+      "pillColor": "purple",
+      "name": "Visual Coding Foundations",
+      "description": "Learn logical programming fundamentals using Code.org's Sprite Lab. 4 sections with lessons and challenges. Final project: create your own interactive Visual Novel.",
+      "url": "course-cp1.php",
+      "status": "available",
+      "requirements": [
+        "3DP1"
+      ],
+      "classTime": "~20 hours",
+      "pathway": "coding",
+      "details": {
+        "learningPoints": [
+          "Understand fundamental programming concepts",
+          "Use variables, loops, and conditionals",
+          "Create event-driven programs",
+          "Design interactive animations and games",
+          "Debug and troubleshoot code",
+          "Build a complete Visual Novel project"
+        ],
+        "lessons": [
+          {
+            "title": "Section 1: Getting Started",
+            "description": "Introduction to Sprite Lab, basic commands, and creating your first animation.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Create an Animated Scene",
+                "time": "45 min"
+              },
+              {
+                "type": "quiz",
+                "title": "Basic Commands Quiz",
+                "time": "15 min"
+              }
+            ]
+          },
+          {
+            "title": "Section 2: Events and Interactions",
+            "description": "Making sprites respond to clicks, keypresses, and other events.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Build an Interactive Game",
+                "time": "90 min"
+              },
+              {
+                "type": "quiz",
+                "title": "Events Knowledge Check",
+                "time": "15 min"
+              }
+            ]
+          },
+          {
+            "title": "Section 3: Variables and Logic",
+            "description": "Using variables to track scores, conditionals for game logic, and loops for repetition.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Create a Scoring System",
+                "time": "60 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Build a Loop Animation",
+                "time": "45 min"
+              }
+            ]
+          },
+          {
+            "title": "Section 4: Final Project",
+            "description": "Apply everything learned to create your own interactive Visual Novel.",
+            "time": "6 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Visual Novel - Planning",
+                "time": "60 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Visual Novel - Development",
+                "time": "3 hours"
+              },
+              {
+                "type": "challenge",
+                "title": "Visual Novel - Presentation",
+                "time": "30 min"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "CP2",
+      "icon": "assets/icons/courses/command-line.svg",
+      "pillColor": "purple",
+      "name": "Python Coding",
+      "description": "Backend and web application development pathway. Build command line apps, automations, web scraping tools. Introduction to API development, Git, GitHub, and version control.",
+      "url": "course-cp2.php",
+      "status": "coming-soon",
+      "requirements": [
+        "CP1"
+      ],
+      "classTime": "~25 hours",
+      "pathway": "coding",
+      "details": {
+        "learningPoints": [
+          "Write Python programs from scratch",
+          "Work with data types, functions, and classes",
+          "Build command-line applications",
+          "Automate tasks with Python scripts",
+          "Use Git and GitHub for version control",
+          "Create basic web scrapers"
+        ],
+        "lessons": [
+          {
+            "title": "Python Fundamentals",
+            "description": "Variables, data types, operators, and basic I/O in Python.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Build a Calculator",
+                "time": "45 min"
+              },
+              {
+                "type": "quiz",
+                "title": "Python Basics Quiz",
+                "time": "20 min"
+              }
+            ]
+          },
+          {
+            "title": "Control Flow and Functions",
+            "description": "If statements, loops, and creating reusable functions.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Number Guessing Game",
+                "time": "60 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Function Library",
+                "time": "45 min"
+              }
+            ]
+          },
+          {
+            "title": "Working with Data",
+            "description": "Lists, dictionaries, file handling, and data manipulation.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Contact Book Application",
+                "time": "90 min"
+              }
+            ]
+          },
+          {
+            "title": "Git and GitHub",
+            "description": "Version control basics, creating repositories, commits, and collaboration.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Create Your First Repository",
+                "time": "30 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Collaborate on a Project",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Automation and Web Scraping",
+            "description": "Automating tasks, working with APIs, and basic web scraping.",
+            "time": "7 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Build an Automation Script",
+                "time": "90 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Web Scraper Project",
+                "time": "2 hours"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "CP3",
+      "icon": "assets/icons/courses/globe-alt.svg",
+      "pillColor": "purple",
+      "name": "JS, APIs, Web Dev & AI",
+      "description": "Build static and dynamic websites, REST APIs, and AI-powered applications. Learn Docker, ReactJS, databases. Final project: fullstack app with Express, Database, and React Vite.",
+      "url": "course-cp3.php",
+      "status": "coming-soon",
+      "requirements": [
+        "CP2"
+      ],
+      "classTime": "~30 hours",
+      "pathway": "coding",
+      "details": {
+        "learningPoints": [
+          "Build modern websites with HTML, CSS, and JavaScript",
+          "Create REST APIs with Express.js",
+          "Work with databases (SQL and NoSQL)",
+          "Build React applications with Vite",
+          "Use Docker for development environments",
+          "Integrate AI APIs into applications"
+        ],
+        "lessons": [
+          {
+            "title": "JavaScript Fundamentals",
+            "description": "Modern JavaScript syntax, DOM manipulation, and async programming.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Interactive Web Page",
+                "time": "90 min"
+              },
+              {
+                "type": "quiz",
+                "title": "JavaScript Concepts Quiz",
+                "time": "20 min"
+              }
+            ]
+          },
+          {
+            "title": "Backend Development with Express",
+            "description": "Building REST APIs, routing, middleware, and server-side logic.",
+            "time": "6 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Build a REST API",
+                "time": "2 hours"
+              }
+            ]
+          },
+          {
+            "title": "Databases",
+            "description": "SQL basics, PostgreSQL, MongoDB, and connecting databases to your API.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Database-Backed API",
+                "time": "90 min"
+              }
+            ]
+          },
+          {
+            "title": "React and Vite",
+            "description": "Component-based UI development, state management, and building SPAs.",
+            "time": "6 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "React Dashboard",
+                "time": "2 hours"
+              }
+            ]
+          },
+          {
+            "title": "Docker and Deployment",
+            "description": "Containerization basics and deploying your applications.",
+            "time": "3 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Dockerize Your App",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Final Project",
+            "description": "Build a fullstack application combining Express, Database, and React.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Fullstack Application",
+                "time": "4 hours"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "MEC1",
+      "icon": "assets/icons/courses/cpu-chip.svg",
+      "pillColor": "yellow",
+      "name": "Microbit, Electronics & Coding",
+      "description": "Apply block coding skills to the Microbit electronic device. Dive into practical IoT and electronics fundamentals. Build multiple projects with take-home challenges.",
+      "url": "course-mec1.php",
+      "status": "coming-soon",
+      "requirements": [
+        "CP1"
+      ],
+      "classTime": "~20 hours",
+      "pathway": "electronics",
+      "careerPath": "Electrical Engineering",
+      "details": {
+        "learningPoints": [
+          "Program the BBC Micro:bit microcontroller",
+          "Understand basic electronics concepts",
+          "Work with sensors and actuators",
+          "Build IoT projects",
+          "Create interactive physical computing projects"
+        ],
+        "lessons": [
+          {
+            "title": "Introduction to Micro:bit",
+            "description": "Getting started with Micro:bit, the MakeCode editor, and your first program.",
+            "time": "3 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Hello World on Micro:bit",
+                "time": "30 min"
+              },
+              {
+                "type": "challenge",
+                "title": "LED Animations",
+                "time": "45 min"
+              }
+            ]
+          },
+          {
+            "title": "Inputs and Sensors",
+            "description": "Using buttons, accelerometer, compass, and light sensor.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Step Counter",
+                "time": "60 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Digital Compass",
+                "time": "45 min"
+              }
+            ]
+          },
+          {
+            "title": "Electronics Basics",
+            "description": "Understanding circuits, LEDs, resistors, and breadboards.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Build a Traffic Light",
+                "time": "60 min"
+              },
+              {
+                "type": "quiz",
+                "title": "Electronics Fundamentals Quiz",
+                "time": "15 min"
+              }
+            ]
+          },
+          {
+            "title": "Advanced Projects",
+            "description": "Combining sensors, outputs, and logic to create complex projects.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Smart Night Light",
+                "time": "90 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Reaction Time Game",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Final IoT Project",
+            "description": "Design and build your own IoT device to take home.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Personal IoT Project",
+                "time": "3 hours"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3DM1",
+      "icon": "assets/icons/courses/cube.svg",
+      "pillColor": "orange",
+      "name": "Introduction to 3D Modeling",
+      "description": "Learn the basics of 3D modeling with TinkerCAD. Focus on design thinking for 3D printing. Final project: design and print custom 3D chess pieces.",
+      "url": "course-3dm1.php",
+      "status": "available",
+      "requirements": [
+        "3DP1"
+      ],
+      "classTime": "~15 hours",
+      "pathway": "3d-modeling",
+      "details": {
+        "learningPoints": [
+          "Navigate TinkerCAD's 3D workspace",
+          "Use primitive shapes to create complex objects",
+          "Apply boolean operations (group, hole, align)",
+          "Design with 3D printing constraints in mind",
+          "Create custom chess pieces from scratch"
+        ],
+        "lessons": [
+          {
+            "title": "TinkerCAD Basics",
+            "description": "Interface overview, navigation, and working with basic shapes.",
+            "time": "2 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Create a Simple Object",
+                "time": "30 min"
+              }
+            ]
+          },
+          {
+            "title": "Combining Shapes",
+            "description": "Grouping objects, creating holes, and using align tools.",
+            "time": "3 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Design a Keychain",
+                "time": "45 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Create a Phone Stand",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Design for 3D Printing",
+            "description": "Understanding overhangs, wall thickness, and printability.",
+            "time": "3 hours",
+            "activities": [
+              {
+                "type": "quiz",
+                "title": "Printability Quiz",
+                "time": "15 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Fix an Unprintable Design",
+                "time": "45 min"
+              }
+            ]
+          },
+          {
+            "title": "Advanced Techniques",
+            "description": "Using the ruler, creating patterns, and importing SVGs.",
+            "time": "3 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Custom Name Tag",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Chess Piece Project",
+            "description": "Design your own custom chess piece set.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Design Chess Pieces",
+                "time": "3 hours"
+              },
+              {
+                "type": "challenge",
+                "title": "Print and Present",
+                "time": "45 min"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "3DM2",
+      "icon": "assets/icons/courses/wrench-screwdriver.svg",
+      "pillColor": "orange",
+      "name": "CAD Modeling - Shapr3D",
+      "description": "Practical CAD modeling using Shapr3D. Builds foundations for industry tools like Fusion360, Solidworks, and OnShape. Prepares students for mechanical engineering careers.",
+      "url": "course-3dm2.php",
+      "status": "coming-soon",
+      "requirements": [
+        "3DM1"
+      ],
+      "classTime": "~20 hours",
+      "pathway": "3d-modeling",
+      "careerPath": "Mechanical Engineering",
+      "details": {
+        "learningPoints": [
+          "Use professional CAD sketching tools",
+          "Create parametric 3D models",
+          "Apply extrusions, revolves, and sweeps",
+          "Design mechanical parts with precision",
+          "Prepare models for manufacturing"
+        ],
+        "lessons": [
+          {
+            "title": "Introduction to Shapr3D",
+            "description": "Interface overview, navigation gestures, and workspace setup.",
+            "time": "2 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Navigate and Create Basic Shapes",
+                "time": "30 min"
+              }
+            ]
+          },
+          {
+            "title": "Sketching Fundamentals",
+            "description": "2D sketching, constraints, dimensions, and construction lines.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Precise 2D Sketches",
+                "time": "60 min"
+              },
+              {
+                "type": "quiz",
+                "title": "Sketching Constraints Quiz",
+                "time": "15 min"
+              }
+            ]
+          },
+          {
+            "title": "3D Operations",
+            "description": "Extrude, revolve, sweep, loft, and shell operations.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Create a Vase with Revolve",
+                "time": "45 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Design a Pipe Fitting",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Mechanical Design",
+            "description": "Designing functional parts, tolerances, and assemblies.",
+            "time": "5 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Design a Hinge Mechanism",
+                "time": "90 min"
+              },
+              {
+                "type": "challenge",
+                "title": "Create Interlocking Parts",
+                "time": "60 min"
+              }
+            ]
+          },
+          {
+            "title": "Final Engineering Project",
+            "description": "Design a functional mechanical device from scratch.",
+            "time": "4 hours",
+            "activities": [
+              {
+                "type": "challenge",
+                "title": "Mechanical Device Project",
+                "time": "3 hours"
+              },
+              {
+                "type": "challenge",
+                "title": "Present Your Design",
+                "time": "30 min"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

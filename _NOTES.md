@@ -23,6 +23,10 @@ Need to define a generic product model
 - Name
 - Description
 - Price
+- SKU
+- UPC
+- Category
+- Type
 
 Product Type is Dynamic
 
