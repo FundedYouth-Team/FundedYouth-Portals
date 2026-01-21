@@ -13,6 +13,9 @@ import { StorePage } from "./pages/StorePage";
 import { AdventuresPage } from "./pages/AdventuresPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ImpactPage } from "./pages/ImpactPage";
+import { LegalIndexPage } from "./pages/legal/LegalIndexPage";
+import { WaiverPage } from "./pages/legal/WaiverPage";
+import { TeachersPage } from "./pages/TeachersPage";
 
 import "./styles/globals.css";
 
@@ -45,6 +48,9 @@ function AppLayout() {
           <Route path="/adventures" element={<AdventuresPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/impact" element={<ImpactPage />} />
+          <Route path="/teachers" element={<TeachersPage />} />
+          <Route path="/legal" element={<LegalIndexPage />} />
+          <Route path="/legal/waiver" element={<WaiverPage />} />
         </Routes>
       </div>
       <Footer />

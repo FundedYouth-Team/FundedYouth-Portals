@@ -225,7 +225,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://fundedyouth.org/blog"
+                  href="https://steamreader.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-400 transition-colors"
@@ -256,6 +256,12 @@ export function Footer() {
             >
               Terms of Service
             </a>
+            <Link
+              to="/legal"
+              className="text-sm hover:text-blue-400 transition-colors"
+            >
+              Legal
+            </Link>
           </div>
         </div>
       </div>

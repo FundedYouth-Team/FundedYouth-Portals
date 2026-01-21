@@ -152,12 +152,7 @@ export function DonatePage() {
             >
               Start Giving Monthly
             </a>
-            <a
-              href="#monthly"
-              className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-8 rounded-full transition-all duration-200 border border-white/40 shadow-lg"
-            >
-              See Your Impact
-            </a>
+
           </div>
           <p className="text-white/90 text-sm mt-6 drop-shadow-md">
             <span className="text-orange-300 font-bold">$200/month</span> = 2 sessions every
@@ -441,12 +436,13 @@ export function DonatePage() {
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Questions About Donating?</h3>
           <p className="text-gray-600 text-sm mb-4">We're here to help. Reach out anytime.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-            <a
-              href="mailto:donate@fundedyouth.org"
-              className="text-blue-600 hover:text-blue-700 font-medium"
-            >
-              donate@fundedyouth.org
-            </a>
+            <span className="inline-flex items-center">
+              <img
+                src="/assets/images/email-donate.svg"
+                alt="Email donate"
+                className="h-5"
+              />
+            </span>
             <span className="hidden sm:inline text-gray-300">|</span>
             <a href="tel:+16197285002" className="text-blue-600 hover:text-blue-700 font-medium">
               (619) 728-5002

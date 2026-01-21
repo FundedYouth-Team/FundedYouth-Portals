@@ -485,7 +485,7 @@ export function ClassesPage() {
                 Sign the Waiver
               </a>
               <Link
-                to="/legal"
+                to="/legal/waiver"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-full transition-all duration-200"
               >
                 Read Waiver Details
