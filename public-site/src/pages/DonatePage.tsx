@@ -3,10 +3,10 @@ import { Link, useSearchParams } from "react-router-dom";
 const monthlyTiers = [
   {
     name: "Level 1 Sponsor",
-    amount: 50,
-    description: "Contributes to the scholarship fund",
+    amount: 75,
+    description: "1 session / month for a single student",
     color: "blue",
-    stripeLink: "https://donate.stripe.com/cNiaEX4sRgKy3VacAA3ZK0c",
+    stripeLink: "https://www.zeffy.com/en-US/donation-form/sponsor-a-student-22",
     benefits: ["Listed on Donors Page", "Monthly Donors Newsletter"],
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
@@ -15,10 +15,10 @@ const monthlyTiers = [
   },
   {
     name: "Level 2 Sponsor",
-    amount: 100,
-    description: "1 session per week for a child",
+    amount: 125,
+    description: "2 sessions / month for a single student",
     color: "purple",
-    stripeLink: "https://donate.stripe.com/cNi3cv8J78e2ajyeII3ZK0d",
+    stripeLink: "https://www.zeffy.com/en-US/donation-form/sponsor-a-student-22",
     benefits: [
       "Updates on your sponsored student",
       "Listed on Donors Page",
@@ -35,9 +35,9 @@ const monthlyTiers = [
   {
     name: "Level 3 Sponsor",
     amount: 200,
-    description: "2 sessions per week for a child",
+    description: "3 sessions / month for a single student",
     color: "orange",
-    stripeLink: "https://donate.stripe.com/7sYbJ1aRfdymbnC6cc3ZK0e",
+    stripeLink: "https://www.zeffy.com/en-US/donation-form/sponsor-a-student-22",
     benefits: [
       "Discounts on Workshops",
       "Updates on your sponsored student",
@@ -51,41 +51,6 @@ const monthlyTiers = [
     checkColor: "text-orange-500",
     highlightText: "text-orange-700",
     buttonClass: "bg-orange-500 hover:bg-orange-600 shadow-md",
-  },
-];
-
-const oneTimeTiers = [
-  {
-    name: "Level 1 Sponsor",
-    amount: 50,
-    description: "Contributes to the scholarship fund",
-    stripeLink: "https://donate.stripe.com/28E9ATe3r0LAbnCcAA3ZK0f",
-    buttonClass: "bg-gray-100 hover:bg-blue-600 hover:text-white text-gray-700",
-  },
-  {
-    name: "Level 2 Sponsor",
-    amount: 100,
-    description: "1 session per week for a child",
-    highlight: "4 sessions total",
-    highlightClass: "text-purple-600",
-    stripeLink: "https://donate.stripe.com/28E5kD7F32TI1N2gQQ3ZK0g",
-    buttonClass: "bg-purple-600 hover:bg-purple-700 text-white",
-  },
-  {
-    name: "Level 3 Sponsor",
-    amount: 200,
-    description: "2 sessions per week for a child",
-    highlight: "8 sessions total",
-    highlightClass: "text-orange-600",
-    stripeLink: "https://donate.stripe.com/eVq8wP5wV51QfDSdEE3ZK0h",
-    buttonClass: "bg-orange-500 hover:bg-orange-600 text-white",
-  },
-  {
-    name: "Custom",
-    amount: null,
-    description: "Give any amount to support student access",
-    stripeLink: "https://buy.stripe.com/aFacN50cB8e2ezOcAA3ZK0i",
-    buttonClass: "bg-gray-100 hover:bg-gray-200 text-gray-700",
   },
 ];
 
@@ -155,8 +120,7 @@ export function DonatePage() {
 
           </div>
           <p className="text-white/90 text-sm mt-6 drop-shadow-md">
-            <span className="text-orange-300 font-bold">$200/month</span> = 2 sessions every
-            week—along a chosen pathway
+            <span className="text-orange-300 font-bold">$200/month</span> = 3 sessions / month for a single student
           </p>
         </div>
       </section>
@@ -191,6 +155,52 @@ export function DonatePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Donor Tip: 100% Donation */}
+      <section className="py-10 bg-blue-50 border-y border-blue-100">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="bg-white rounded-2xl shadow-md p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div className="shrink-0">
+              <img
+                src="/assets/images/zeffy-100-percent-donation.png"
+                alt="Zeffy donation summary showing the 'Other' option to ensure 100% goes to FundedYouth"
+                className="rounded-lg border border-gray-200 shadow-sm w-full md:w-64"
+              />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <svg
+                  className="size-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <h3 className="text-lg font-bold text-gray-900">
+                  Want 100% of Your Donation to Go to FundedYouth?
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">
+                Our donation platform, Zeffy, is 100% free for nonprofits and
+                funded by optional donor contributions. During checkout,
+                you&apos;ll see a <strong>Summary</strong> section with a
+                suggested contribution to Zeffy.
+              </p>
+              <p className="text-gray-800 text-sm font-medium">
+                To ensure your <em>entire</em> donation goes to FundedYouth,
+                select <strong>&ldquo;Other&rdquo;</strong> from the dropdown
+                and enter <strong>$0</strong>.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -279,22 +289,20 @@ export function DonatePage() {
                       </svg>
                     </div>
                     <div>
-                      <span className="font-bold text-white text-xl">Corporate Sponsor</span>
-                      <p className="text-slate-400 text-sm">Executive & Business Partners</p>
+                      <span className="font-bold text-white text-xl">Level 4 Sponsor</span>
+                      <p className="text-slate-400 text-sm">10 sessions / month for a single student</p>
                     </div>
                   </div>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">$500+</span>
-                    <span className="text-slate-400">/month</span>
+                    <span className="text-4xl font-bold text-white">$500</span>
+                    <span className="text-slate-400"> / month</span>
                   </div>
                   <ul className="grid md:grid-cols-2 gap-3 text-sm text-slate-300">
                     {[
-                      "Sponsor multiple students",
-                      "Logo on website & materials",
-                      "Quarterly impact presentations",
-                      "VIP event invitations",
-                      "Social media recognition",
-                      "Option to join board meetings",
+                      "Fully back 1 student",
+                      "Covers all pathways",
+                      "Everything from Level 3",
+                      "Discounts on latest products",
                     ].map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2">
                         <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -306,12 +314,13 @@ export function DonatePage() {
                   </ul>
                 </div>
                 <div className="flex-shrink-0">
-                  <Link
-                    to="/sponsor"
-                    className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold py-4 px-8 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl text-center"
-                  >
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.zeffy.com/en-US/donation-form/sponsor-a-student-22"
+                    className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold py-4 px-8 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl text-center">
                     Contact Us to Partner
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -350,39 +359,15 @@ export function DonatePage() {
             </p>
           </div>
 
-          {/* One-Time Donation Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
-            {oneTimeTiers.map((tier) => (
-              <div
-                key={tier.name}
-                className="border border-gray-200 rounded-xl p-5 text-center hover:border-blue-300 hover:shadow-md transition-all flex flex-col"
-              >
-                <div className="flex items-center justify-center gap-1 mb-2">
-                  <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                  <span className="text-xs text-gray-500 font-medium">{tier.name}</span>
-                </div>
-                <p className="text-3xl font-bold text-gray-900 mb-1">
-                  {tier.amount ? `$${tier.amount}` : "$___"}
-                </p>
-                <p className="text-xs text-gray-500 mb-2">one-time</p>
-                <p className="text-xs text-gray-600 mb-1">{tier.description}</p>
-                {tier.highlight && (
-                  <p className={`text-xs ${tier.highlightClass} font-medium mb-3 flex-grow`}>
-                    {tier.highlight}
-                  </p>
-                )}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={tier.stripeLink}
-                  className={`block w-full text-center ${tier.buttonClass} font-semibold py-2 px-4 rounded-lg transition-all duration-200 text-sm mt-auto`}
-                >
-                  {tier.amount ? `Donate $${tier.amount}` : "Custom Amount"}
-                </a>
-              </div>
-            ))}
+          <div className="flex justify-center mb-8">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.zeffy.com/en-US/donation-form/one-time-donation-33"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Make a One-Time Donation
+            </a>
           </div>
         </div>
       </section>
@@ -416,8 +401,8 @@ export function DonatePage() {
             written a line of code, never imagined they could build something real.
           </p>
           <p className="text-white font-semibold mb-6 drop-shadow-md">
-            <span className="text-orange-300">$200/month</span> gives a child 2 sessions every
-            week—
+            <span className="text-orange-300">$200/month</span> gives a child 3 sessions every
+            month—
             <br />
             any pathway they choose, from 3D printing to coding and beyond.
           </p>
